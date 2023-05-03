@@ -105,7 +105,7 @@ test.describe('Hooks', () => {
     test('single_Element_Screenshot', async ({ page }) => {
         // await page.goto('https://example.com/');
         const element = await page.$('h1');
-        await element.screenshot({ path: 'element_ screenshot.png' });
+        // await element.screenshot({ path: 'element_ screenshot.png' });
     });
 });
 
