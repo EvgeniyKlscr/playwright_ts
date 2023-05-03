@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  playwright:
+    container_name: playwright-test
+    image: mcr.microsoft.com/playwright:v1.30.0-focal
+    working_dir: /automation
+    volumes:
+      - .:/automation
+      - ./package.json:/automation/package.json
+      - ./package-lock.json:/automation/package-lock.json
+    command: bash -c "npm install && npm run test-ci"
